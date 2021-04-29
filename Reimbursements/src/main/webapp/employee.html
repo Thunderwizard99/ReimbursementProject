@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Employee Menu</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="employee.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <button class="btn btn-outline-success my-2 my-sm-0" id="logout">Logout</button>
+    </nav>
+
+    <main role="main" class="container">
+
+      <div class="starter-template">
+        <h1>Employee Menu</h1>
+        <p class="lead">Welcome, placeholder!</p>
+      </div>
+      <div class="sidebyside">
+        <div class="flex">
+            <h2>New Reimbursement</h2>
+            <form action="newreimbursementservlet">
+                <label for="amount">Amount: $</label>
+                <input type="number" min="0.00" max="10000.00" step="0.01" name="amount" id="amount" /><br>
+                <label for="reason">Reason: </label>
+                <input type="text" name="reason" id="reason" /><br>
+                <input type="submit" value="Submit" /><input type="reset" value="Reset" /> 
+            </form>
+            <p id="response1"></p>
+        </div>
+        <div class="flex">
+            <h2>Current Reimbursements</h2>
+            <button action="showpendingservlet">Show Pending Reimbursements</button><br>
+            <button action="showresolvedservlet">Show Resolved Reimbursements</button>
+            <p id="response2">Your reimbursements will show here.</p>
+        </div>
+      </div>
+      <div class="sidebyside">
+        <div class="flex">
+            <h2>Personal Information</h2>
+            <form action="employeeviewinfoservlet">
+            	<input type="submit" value="Show Information" />
+            </form>
+            <!-- <button action="employeeviewinfoservlet">Show Information</button> -->
+            <p id="response3"></p>
+        </div>
+        <div class="flex">
+            <h2>Update Information</h2>
+            <form action="employeeusernameservlet">
+                <label for="uname">New Username: </label>
+                <input type="text" name="uname" id="uname" /><br>
+                <label for="uuname">Confirm New Username: </label>
+                <input type="text" name="uuname" id="uuname" /><br>
+                <input type="submit" value="Submit Username" /><input type="reset" value="Reset" /><br>
+            </form>
+            <form action="employeepasswordservlet">
+                <label for="pword">New Password: </label>
+                <input type="password" name="pword" id="pword" /><br>
+                <label for="upword">Confirm New Password: </label>
+                <input type="password" name="upword" id="upword" /><br>
+                <input type="submit" value="Submit Password" /><input type="reset" value="Reset" /> 
+            </form>
+            <p id="response4"></p>
+        </div>
+      </div>
+
+    </main><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

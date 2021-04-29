@@ -1,0 +1,23 @@
+body {
+    padding-top: 5rem;
+    background-color: #ebdff3;
+  }
+  .starter-template {
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+  
+  .sidebyside {
+    display: flex;
+  }
+
+  .flex {
+    padding: 3rem 3rem;
+    flex: 1;
+    margin: 20px;
+    border: solid 1px grey;
+  }
+
+  #logout {
+    float: right;
+  }
